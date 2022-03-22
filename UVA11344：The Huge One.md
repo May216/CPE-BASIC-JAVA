@@ -21,26 +21,24 @@ public class main{
     Scanner sc = new Scanner(System.in);
     int N = sc.nextInt();
     while(N-- > 0) {
-    	BigInteger M = sc.nextBigInteger(); // 被除數
-    	int S = sc.nextInt(); // 除數個數
-    	Vector<BigInteger> vector = new Vector<BigInteger>(); // 除數
-    	for(int i = 0; i < S; i++) {
-    		vector.add(sc.nextBigInteger());
-    	}
-    	
-    	boolean flag = true;
-    	Iterator<BigInteger> itr = vector.iterator();
-    	while(itr.hasNext()) {
-    		BigInteger d = itr.next();
-    		if (M.mod(d) != BigInteger.ZERO) {
-    			flag = false;
-    		}
-    	}
-    	if (flag) System.out.println(M + " - Wonderful.");
-    	else System.out.println(M + " - Simple.");
+        BigInteger M = sc.nextBigInteger(); // 被除數
+        int S = sc.nextInt(); // 除數個數
+        Vector<BigInteger> vector = new Vector<BigInteger>(); // 除數
+        for(int i = 0; i < S; i++) {
+            vector.add(sc.nextBigInteger());
+        }
+
+        boolean flag = true;
+        Iterator<BigInteger> itr = vector.iterator();
+        while(itr.hasNext()) {
+            BigInteger d = itr.next();
+            if (M.mod(d) != BigInteger.ZERO) {
+                flag = false;
+            }
+        }
+        if (flag) System.out.println(M + " - Wonderful.");
+        else System.out.println(M + " - Simple.");
     }
   }
 };
 ```
-
-

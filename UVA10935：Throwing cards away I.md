@@ -21,21 +21,21 @@ public class main{
     Scanner sc = new Scanner(System.in);
     String s = "";
     while(sc.hasNext()) {
-    	s = "";
-    	int n = sc.nextInt();
-    	if (n == 0) break;
-    	Queue<Integer> q = new ArrayDeque<Integer>();
-    	
-    	for(int i = 1; i <= n; i++) q.add(i);
-    	
-    	while(!q.isEmpty()) {
-    		if (q.size() == 1) break;
-    		String k = "" + q.poll();
-    		q.add(q.poll());
-    		s += k + (q.size() > 1 ? ", " : "");
-    	}
-    	System.out.println("Discarded cards: " + s);
-    	System.out.println("Remaining card: " + q.poll());
+        s = "";
+        int n = sc.nextInt();
+        if (n == 0) break;
+        Queue<Integer> q = new ArrayDeque<Integer>();
+
+        for(int i = 1; i <= n; i++) q.add(i);
+
+        while(!q.isEmpty()) {
+            if (q.size() == 1) break;
+            String k = "" + q.poll();
+            q.add(q.poll());
+            s += k + (q.size() > 1 ? ", " : "");
+        }
+        System.out.println("Discarded cards: " + s);
+        System.out.println("Remaining card: " + q.poll());
     }
   }
 };

@@ -19,39 +19,39 @@ public class main{
     Scanner sc = new Scanner(System.in);
     int count = 1;
     while(sc.hasNext()) {
-    	System.out.printf("%4d.", count);
+        System.out.printf("%4d.", count);
 
-    	long num = sc.nextLong();
-    	if(num == 0) System.out.printf(" 0");
-    	else calculate(num);
-    	
-    	count++;
-    	System.out.println("");
+        long num = sc.nextLong();
+        if(num == 0) System.out.printf(" 0");
+        else calculate(num);
+
+        count++;
+        System.out.println("");
     }
   }
-  
+
   public static void calculate(long n) {
-  	if (n >= 10000000) {
-  		calculate(n / 10000000);
-  		System.out.print(" kuti");
-  		n = n % 10000000;
-  	}
-  	if (n >= 100000) {
-  		calculate(n / 100000);
-  		System.out.print(" lakh");
-  		n = n % 100000;
-  	}
-  	if (n >= 1000) {
-  		calculate(n / 1000);
-  		System.out.print(" hajar");
-  		n = n % 1000;
-  	}
-  	if (n >= 100) {
-  		calculate(n / 100);
-  		System.out.print(" shata");
-  		n = n % 100;
-  	}
-  	if (n > 0) System.out.print(" " + n);
+      if (n >= 10000000) {
+          calculate(n / 10000000);
+          System.out.print(" kuti");
+          n = n % 10000000;
+      }
+      if (n >= 100000) {
+          calculate(n / 100000);
+          System.out.print(" lakh");
+          n = n % 100000;
+      }
+      if (n >= 1000) {
+          calculate(n / 1000);
+          System.out.print(" hajar");
+          n = n % 1000;
+      }
+      if (n >= 100) {
+          calculate(n / 100);
+          System.out.print(" shata");
+          n = n % 100;
+      }
+      if (n > 0) System.out.print(" " + n);
   }
 };
 ```

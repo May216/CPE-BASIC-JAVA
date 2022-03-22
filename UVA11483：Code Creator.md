@@ -18,21 +18,21 @@ public class main{
     Scanner sc = new Scanner(System.in);
     int n = 0, Case = 0;
     while((n = Integer.parseInt(sc.nextLine().trim())) != 0) {
-    	StringBuilder str = new StringBuilder();
-    	System.out.printf("Case %d:\r\n", ++Case);
-    	str.append("#include<string.h>\r\n#include<stdio.h>\r\nint main()\r\n{\r\n");
-    	while(n-- > 0) {
-    		char text[] = sc.nextLine().toCharArray();
-    		str.append("printf(\"");
-    
-    		for(char c: text) {
-				if(c == '"') str.append("\\\"");
-				else str.append(c);
-			}
-    		str.append("\\n\");\r\n");
-    	}
-    	str.append("printf(\"\\n\");\r\nreturn 0;\r\n}\r\n");
-    	System.out.print(str);
+        StringBuilder str = new StringBuilder();
+        System.out.printf("Case %d:\r\n", ++Case);
+        str.append("#include<string.h>\r\n#include<stdio.h>\r\nint main()\r\n{\r\n");
+        while(n-- > 0) {
+            char text[] = sc.nextLine().toCharArray();
+            str.append("printf(\"");
+
+            for(char c: text) {
+                if(c == '"') str.append("\\\"");
+                else str.append(c);
+            }
+            str.append("\\n\");\r\n");
+        }
+        str.append("printf(\"\\n\");\r\nreturn 0;\r\n}\r\n");
+        System.out.print(str);
     }
   }
 };

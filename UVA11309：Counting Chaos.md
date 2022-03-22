@@ -20,19 +20,19 @@ public class main{
     Scanner sc = new Scanner(System.in);
     int cases = sc.nextInt();
     while(cases-- > 0) {
-    	String time = sc.next();
-    	int h = (time.charAt(0) - '0') * 10 + (time.charAt(1) - '0');
-		int m = (time.charAt(3) - '0') * 10 + (time.charAt(4) - '0');
-    
-    	while(true) {
-    		m++;
-    		h = (m/60 + h) % 24;
-    		m = m % 60;
-    		String temp = Integer.toString(h*100 + m); //小時 * 100 + 分 → 23:30 => 2330
-    		StringBuilder temp2 = new StringBuilder(temp);
-    		if(temp.equals(temp2.reverse().toString())) break; // 當回文就停止
-    	}
-    	System.out.println("" + (h/10) + (h%10) + ":" + (m/10) + (m%10)); // 個位數要補0
+        String time = sc.next();
+        int h = (time.charAt(0) - '0') * 10 + (time.charAt(1) - '0');
+        int m = (time.charAt(3) - '0') * 10 + (time.charAt(4) - '0');
+
+        while(true) {
+            m++;
+            h = (m/60 + h) % 24;
+            m = m % 60;
+            String temp = Integer.toString(h*100 + m); //小時 * 100 + 分 → 23:30 => 2330
+            StringBuilder temp2 = new StringBuilder(temp);
+            if(temp.equals(temp2.reverse().toString())) break; // 當回文就停止
+        }
+        System.out.println("" + (h/10) + (h%10) + ":" + (m/10) + (m%10)); // 個位數要補0
     }
   }
 };

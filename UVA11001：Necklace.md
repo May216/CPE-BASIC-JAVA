@@ -25,22 +25,20 @@ public class main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     while(sc.hasNextLine()) {
-    	int v = sc.nextInt(), v0 = sc.nextInt();
-    	if(v == 0 && v0 == 0) break;
-    	if (v <= v0) System.out.println('0');
-    	else if (v <= 2 * v0) System.out.println('1');
-    	else {
-    		if ((0.5 * v / v0) - (int)(0.5 * v / v0) == 0.5) {
-    			System.out.println("0");
-    		} else if ((0.5 * v / v0) - (int)(0.5 * v / v0) < 0.5) {
-    			System.out.printf("%d\r\n", (int)(0.5 * v / v0));
-    		} else {
-    			System.out.printf("%d\r\n", (int)(0.5 * v / v0) + 1);
-    		}
-    	}
+        int v = sc.nextInt(), v0 = sc.nextInt();
+        if(v == 0 && v0 == 0) break;
+        if (v <= v0) System.out.println('0');
+        else if (v <= 2 * v0) System.out.println('1');
+        else {
+            if ((0.5 * v / v0) - (int)(0.5 * v / v0) == 0.5) {
+                System.out.println("0");
+            } else if ((0.5 * v / v0) - (int)(0.5 * v / v0) < 0.5) {
+                System.out.printf("%d\r\n", (int)(0.5 * v / v0));
+            } else {
+                System.out.printf("%d\r\n", (int)(0.5 * v / v0) + 1);
+            }
+        }
     }
   }
 };
 ```
-
-

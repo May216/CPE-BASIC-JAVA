@@ -19,13 +19,11 @@ public class main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     while(sc.hasNext()) {
-    	long n = sc.nextLong();
-    	if (n == 0) break;
-    	while(n / 10 != 0) n = n / 10 + n % 10;
-    	System.out.println(n);
+        long n = sc.nextLong();
+        if (n == 0) break;
+        while(n / 10 != 0) n = n / 10 + n % 10;
+        System.out.println(n);
     }
   }
 };
 ```
-
-

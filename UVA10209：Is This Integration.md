@@ -25,20 +25,18 @@ public class main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     while(sc.hasNext()) {
-    	double a = sc.nextDouble();
-    	double square = Math.pow(a, 2);
-    	// 格子
-    	double x = square - (square * Math.PI / 6) - (square * Math.sqrt(3) / 4);
-    	// 點
-    	double y = square - (square * Math.PI / 4) - 2 * x;
-    	// 斜線
-    	double z = square - 4 * x - 4 * y;
-    	// 斜線, 點, 格子
-    	System.out.printf("%.3f %.3f %.3f", z, 4 * y, 4 * x);
-    	System.out.println("");
+        double a = sc.nextDouble();
+        double square = Math.pow(a, 2);
+        // 格子
+        double x = square - (square * Math.PI / 6) - (square * Math.sqrt(3) / 4);
+        // 點
+        double y = square - (square * Math.PI / 4) - 2 * x;
+        // 斜線
+        double z = square - 4 * x - 4 * y;
+        // 斜線, 點, 格子
+        System.out.printf("%.3f %.3f %.3f", z, 4 * y, 4 * x);
+        System.out.println("");
     }
   }
 };
 ```
-
-

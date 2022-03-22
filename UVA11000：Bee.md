@@ -8,7 +8,7 @@
 
 ## 解題技巧
 
--  　　　公　母
+- 　　　公　母
 
 - N = 0　0　  1
 
@@ -32,17 +32,17 @@ public class main{
     Scanner sc = new Scanner(System.in);
     long n;
     while(sc.hasNextLong() && (n = sc.nextLong()) != -1) {
-    	long male = 0, female = 1, maleTemp = 0, femaleTemp = 0;
-    	while(n > 0) {
-    		femaleTemp = male + 1;
-    		maleTemp = female + male;
-    		female = femaleTemp;
-    		male = maleTemp;
-    		
-    		n--;
-    	}
-    	
-    	System.out.println(male + " " + (male + female));
+        long male = 0, female = 1, maleTemp = 0, femaleTemp = 0;
+        while(n > 0) {
+            femaleTemp = male + 1;
+            maleTemp = female + male;
+            female = femaleTemp;
+            male = maleTemp;
+
+            n--;
+        }
+
+        System.out.println(male + " " + (male + female));
     }
   }
 };

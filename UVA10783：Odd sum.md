@@ -31,7 +31,6 @@ public class Uva10783 {
       }
       System.out.println("Case " + id + ": " + sum);
     }
-    sc.close();
   }
 }
 ```

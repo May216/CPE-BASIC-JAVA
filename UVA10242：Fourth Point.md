@@ -19,24 +19,24 @@ public class main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     while(sc.hasNextDouble()) {
-    	double[] px = new double[4];
-    	double[] py = new double[4];
-    	double x = 0, y = 0;
-    	for(int i = 0; i < 4; i++) {
-    		px[i] = sc.nextDouble();
-    		py[i] = sc.nextDouble();
-    		x += px[i];
-    		y += py[i];
-    	}
-    	
-    	for(int i = 0; i < 4; i++) {
-    		for(int j = i + 1; j < 4; j++) {
-    			if(px[i] == px[j] && py[i] == py[j]) {
-    				System.out.printf("%.3f %.3f\r\n", x - px[i] * 3, y - py[i] * 3);
-    				break;
-    			}
-    		}
-    	}
+        double[] px = new double[4];
+        double[] py = new double[4];
+        double x = 0, y = 0;
+        for(int i = 0; i < 4; i++) {
+            px[i] = sc.nextDouble();
+            py[i] = sc.nextDouble();
+            x += px[i];
+            y += py[i];
+        }
+
+        for(int i = 0; i < 4; i++) {
+            for(int j = i + 1; j < 4; j++) {
+                if(px[i] == px[j] && py[i] == py[j]) {
+                    System.out.printf("%.3f %.3f\r\n", x - px[i] * 3, y - py[i] * 3);
+                    break;
+                }
+            }
+        }
     }
   }
 };

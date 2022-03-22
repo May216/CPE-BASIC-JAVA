@@ -17,33 +17,33 @@ public class main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     while(sc.hasNext()) {
-    	String str = sc.next();
-    	String reverse = "";
+        String str = sc.next();
+        String reverse = "";
 
-    	// 反轉
-    	for(int i = str.length() - 1; i >= 0; i--)
-    		reverse += str.charAt(i);
-		
-		// 反轉前後皆為質數
-		if (isPrime(Integer.parseInt(str)) && isPrime(Integer.parseInt(reverse)) && !str.equals(reverse)) {
-			System.out.println(str + " is emirp.");
-		} else if (isPrime(Integer.parseInt(str))) { // 反轉前為質數
-			System.out.println(str + " is prime.");
-		} else { // 都不是質數
-			System.out.println(str + " is not prime.");
-		}
+        // 反轉
+        for(int i = str.length() - 1; i >= 0; i--)
+            reverse += str.charAt(i);
+
+        // 反轉前後皆為質數
+        if (isPrime(Integer.parseInt(str)) && isPrime(Integer.parseInt(reverse)) && !str.equals(reverse)) {
+            System.out.println(str + " is emirp.");
+        } else if (isPrime(Integer.parseInt(str))) { // 反轉前為質數
+            System.out.println(str + " is prime.");
+        } else { // 都不是質數
+            System.out.println(str + " is not prime.");
+        }
     }
   }
   // 判斷是否為質數 (有沒有除了 1 和本身之外的因數)
   public static boolean isPrime(int n) {
-  	boolean flag = true;
-  	for(int i = 2; i <= n / 2; i++) {
-  		if (n % i == 0) {
-  			flag = false;
-  			break;
-  		}
-  	}
-  	return flag;
+      boolean flag = true;
+      for(int i = 2; i <= n / 2; i++) {
+          if (n % i == 0) {
+              flag = false;
+              break;
+          }
+      }
+      return flag;
   }
 };
 ```

@@ -33,8 +33,6 @@ public class Uva10931 {
 
             System.out.println("The parity of " + str + " is " + count + " (mod 2).");
         }
-
-        sc.close();
     }
 }
 ```

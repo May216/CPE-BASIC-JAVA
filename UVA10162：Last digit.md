@@ -31,20 +31,18 @@ public class main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int maps[] = { 0, 1, 5, 2, 8, 3, 9, 2, 8, 7, 7, 8, 4, 7, 3, 8, 4, 1, 5, 4 };
- 
+
     while(sc.hasNext()) {
-    	String str = sc.next();
-    	if(str.equals("0")) break;
-    	int len = str.length();
-    	int value = str.charAt(len - 1) - '0'; // 當前個位數
-    	if(len > 1) value += (str.charAt(len - 2) - '0') * 10; // 當前十位數
+        String str = sc.next();
+        if(str.equals("0")) break;
+        int len = str.length();
+        int value = str.charAt(len - 1) - '0'; // 當前個位數
+        if(len > 1) value += (str.charAt(len - 2) - '0') * 10; // 當前十位數
         // maps[value % 20] : 20個數小循環中的哪個數
         // value / 20 * 4 : 找出是位於第幾個小循環, 判斷要加幾個4(每次小循環都比上次多4)
         // 最後 % 10 是為了取個位數 (last digit)
-    	System.out.println((maps[value % 20] + value / 20 *  4) % 10);
+        System.out.println((maps[value % 20] + value / 20 *  4) % 10);
     }
   }
 };
 ```
-
-

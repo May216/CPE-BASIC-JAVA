@@ -23,37 +23,35 @@ public class main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int cases = sc.nextInt();
-	while(cases-- > 0) {
-		int M = sc.nextInt(), N = sc.nextInt(), Q = sc.nextInt();
-		char map[][]=new char[M][N];
-		for(int i = 0 ;i < M; i++){
-			String temp = sc.next();
-			for(int j = 0; j < N; j++){
-				map[i][j] = temp.charAt(j);
-			}
-		}
-		System.out.println(M + " " + N + " " + Q);
-		while(Q-- > 0) {
-			int x = sc.nextInt(), y = sc.nextInt();
-			char center = map[x][y];
-			int i;
-			for(i = 0; i < M; i++) {
-				boolean flag = true;
-				for(int j = x - i; j <= x + i && flag; j++) {
-					for(int k = y - i; k <= y + i; k++) {
-						if(j < 0 || k < 0 || j >= M || k >= N || center != map[j][k]) {
-							flag = false;
-							break;
-						}
-					}	
-				}
-				if(!flag) break;
-			}
-			System.out.println(i * 2 - 1);
-		}
-	}
+    while(cases-- > 0) {
+        int M = sc.nextInt(), N = sc.nextInt(), Q = sc.nextInt();
+        char map[][]=new char[M][N];
+        for(int i = 0 ;i < M; i++){
+            String temp = sc.next();
+            for(int j = 0; j < N; j++){
+                map[i][j] = temp.charAt(j);
+            }
+        }
+        System.out.println(M + " " + N + " " + Q);
+        while(Q-- > 0) {
+            int x = sc.nextInt(), y = sc.nextInt();
+            char center = map[x][y];
+            int i;
+            for(i = 0; i < M; i++) {
+                boolean flag = true;
+                for(int j = x - i; j <= x + i && flag; j++) {
+                    for(int k = y - i; k <= y + i; k++) {
+                        if(j < 0 || k < 0 || j >= M || k >= N || center != map[j][k]) {
+                            flag = false;
+                            break;
+                        }
+                    }    
+                }
+                if(!flag) break;
+            }
+            System.out.println(i * 2 - 1);
+        }
+    }
   }
 };
 ```
-
-

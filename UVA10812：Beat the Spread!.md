@@ -20,14 +20,12 @@ public class main{
     Scanner sc = new Scanner(System.in);
     int cases = sc.nextInt();
     while(cases-- > 0) {
-    	int s = sc.nextInt(), d = sc.nextInt();
-    	if (s < d || (((s + d) % 2) != 0) || (((s - d) % 2) != 0)) System.out.println("impossible");
-    	else {
-    		System.out.println(((s + d) / 2) + " " + ((s - d) / 2));
-    	}
+        int s = sc.nextInt(), d = sc.nextInt();
+        if (s < d || (((s + d) % 2) != 0) || (((s - d) % 2) != 0)) System.out.println("impossible");
+        else {
+            System.out.println(((s + d) / 2) + " " + ((s - d) / 2));
+        }
     }
   }
 };
 ```
-
-

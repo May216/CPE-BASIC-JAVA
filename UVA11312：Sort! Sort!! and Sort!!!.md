@@ -50,7 +50,6 @@ public class Uva11321 {
         }
       }
     }
-    sc.close();
   }
 }
 ```
